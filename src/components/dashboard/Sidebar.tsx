@@ -16,7 +16,7 @@ const Sidebar = () => {
       {/* Mode Toggle */}
       <div className="p-4">
         <div className="flex gap-1 bg-muted rounded-lg p-1">
-          <button className="flex-1 py-2 px-3 text-xs font-medium rounded-md bg-card text-foreground">
+          <button className="flex-1 py-2 px-3 text-xs font-medium rounded-md bg-primary text-primary-foreground">
             Learn Mode
           </button>
           <button className="flex-1 py-2 px-3 text-xs font-medium rounded-md text-muted-foreground hover:text-foreground transition-colors">
