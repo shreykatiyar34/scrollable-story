@@ -78,19 +78,19 @@ const Index = () => {
             {/* Stats Grid */}
             <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <StatCard
-                icon={<Flame className="w-5 h-5" />}
+                icon={<Flame className="w-5 h-5 text-primary" />}
                 value={5}
                 label="Current Streak"
                 sublabel="Keep it Up"
               />
               <StatCard
-                icon={<FileText className="w-5 h-5" />}
+                icon={<FileText className="w-5 h-5 text-primary" />}
                 value={14}
                 label="Tests Taken"
                 sublabel="Total this month"
               />
               <StatCard
-                icon={<TrendingDown className="w-5 h-5" />}
+                icon={<TrendingDown className="w-5 h-5 text-danger" />}
                 value={3}
                 label="Active Weakness"
                 sublabel="Study and practice"
@@ -98,7 +98,7 @@ const Index = () => {
                 badgeColor="text-pink"
               />
               <StatCard
-                icon={<Flame className="w-5 h-5" />}
+                icon={<Flame className="w-5 h-5 text-primary" />}
                 value={5}
                 label="Current Streak"
                 sublabel="Keep it Up"
@@ -106,7 +106,7 @@ const Index = () => {
                 badgeColor="text-success"
               />
               <StatCard
-                icon={<FileText className="w-5 h-5" />}
+                icon={<FileText className="w-5 h-5 text-primary" />}
                 value={14}
                 label="Tests Taken"
                 sublabel="Total this month"
