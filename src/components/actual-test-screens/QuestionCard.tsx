@@ -24,7 +24,7 @@ const QuestionCard = ({
       {/* Section Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Badge className="bg-primary text-primary-foreground px-3 py-1">
+          <Badge className="bg-pink-600 text-white px-3 py-1">
             {section}
           </Badge>
           <span className="text-muted-foreground text-sm">
