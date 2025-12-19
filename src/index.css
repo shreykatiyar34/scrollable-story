@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
+/* Tailwind v4: ensure content scanning picks up all classes in this Vite app */
+@source "./**/*.{html,ts,tsx}";
+
 @theme {
   /* Font family */
   --font-sans: 'Plus Jakarta Sans', sans-serif;
@@ -92,38 +95,39 @@
 
 /* CSS Variables for theming */
 :root {
-  --background: 220 20% 10%;
-  --foreground: 210 40% 98%;
+  /* Light theme defaults (prevents "black on black" if Tailwind utilities fail to load) */
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
 
-  --card: 220 18% 13%;
-  --card-foreground: 210 40% 98%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
 
-  --popover: 220 18% 13%;
-  --popover-foreground: 210 40% 98%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
 
-  --primary: 120 100% 50%;
-  --primary-foreground: 220 20% 10%;
+  --primary: 120 100% 35%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 220 16% 18%;
-  --secondary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
 
-  --muted: 220 14% 20%;
-  --muted-foreground: 215 20% 55%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
 
-  --accent: 120 100% 50%;
-  --accent-foreground: 220 20% 10%;
+  --accent: 120 100% 35%;
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive-foreground: 0 0% 100%;
 
-  --border: 220 14% 22%;
-  --input: 220 14% 22%;
-  --ring: 120 100% 50%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 120 100% 35%;
 
   --radius: 0.75rem;
 
   /* Custom colors for the dashboard */
-  --success: 120 100% 50%;
+  --success: 120 100% 35%;
   --warning: 45 93% 58%;
   --info: 199 89% 48%;
   --danger: 0 84% 60%;
@@ -132,14 +136,14 @@
   --pink: 330 80% 60%;
 
   /* Sidebar */
-  --sidebar-background: 220 20% 8%;
-  --sidebar-foreground: 210 40% 98%;
-  --sidebar-primary: 120 100% 50%;
-  --sidebar-primary-foreground: 220 20% 10%;
-  --sidebar-accent: 220 16% 15%;
-  --sidebar-accent-foreground: 210 40% 98%;
-  --sidebar-border: 220 14% 18%;
-  --sidebar-ring: 120 100% 50%;
+  --sidebar-background: 210 40% 98%;
+  --sidebar-foreground: 222 47% 11%;
+  --sidebar-primary: 120 100% 35%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 210 40% 96%;
+  --sidebar-accent-foreground: 222 47% 11%;
+  --sidebar-border: 214 32% 91%;
+  --sidebar-ring: 120 100% 35%;
 }
 
 .dark {
