@@ -9,6 +9,7 @@ import UploadSolution from "./pages/UploadSolution";
 import WaitingScreen from "./pages/WaitingScreen";
 import TestResults from "./pages/TestResults";
 import Review from "./pages/Review";
+import AnswerKey from "./pages/AnswerKey";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/waiting" element={<WaitingScreen />} />
           <Route path="/results" element={<TestResults />} />
           <Route path="/review" element={<Review />} />
+          <Route path="/answer-key" element={<AnswerKey />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
