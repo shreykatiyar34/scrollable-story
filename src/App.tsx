@@ -13,6 +13,7 @@ import AnswerKey from "./pages/AnswerKey";
 import RevisionNoContent from "./pages/RevisionNoContent";
 import RevisionWithContent from "./pages/RevisionWithContent";
 import RevisionChatbot from "./pages/RevisionChatbot";
+import Progress from "./pages/Progress";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/revision-no-content" element={<RevisionNoContent />} />
           <Route path="/revision-with-content" element={<RevisionWithContent />} />
           <Route path="/revision-chatbot" element={<RevisionChatbot />} />
+          <Route path="/progress" element={<Progress />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
