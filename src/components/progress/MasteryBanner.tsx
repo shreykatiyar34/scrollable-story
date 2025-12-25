@@ -28,8 +28,7 @@ const MasteryBanner = ({ masteryPercent, masteredTopic, needsAttentionTopic }: M
           </p>
           <Button
             onClick={() => navigate("/review")}
-            variant="outline"
-            className="bg-[var(--bg-secondary)] border-[var(--border-color)] text-[var(--text-primary)] hover:bg-[var(--bg-hover)]"
+            className="bg-[var(--accent-color)] text-[var(--bg-primary)] hover:bg-[var(--accent-color)]/90 font-medium"
           >
             Review Answers &gt;
           </Button>
