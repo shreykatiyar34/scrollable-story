@@ -11,6 +11,7 @@ import TestResults from "./pages/TestResults";
 import Review from "./pages/Review";
 import AnswerKey from "./pages/AnswerKey";
 import RevisionNoContent from "./pages/RevisionNoContent";
+import RevisionWithContent from "./pages/RevisionWithContent";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/review" element={<Review />} />
           <Route path="/answer-key" element={<AnswerKey />} />
           <Route path="/revision-no-content" element={<RevisionNoContent />} />
+          <Route path="/revision-with-content" element={<RevisionWithContent />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
