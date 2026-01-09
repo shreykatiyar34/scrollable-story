@@ -9,7 +9,7 @@ import LandingFooter from "@/components/landing-page/LandingFooter";
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-[var(--bg-black)]">
+    <div className="min-h-screen bg-[var(--bg-primary)]">
       <LandingNavbar />
       <HeroSection />
       <HowItWorksSection />
