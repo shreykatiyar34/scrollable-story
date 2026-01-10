@@ -73,7 +73,7 @@ const HeroSection = () => {
           Get Smart With
         </h1>
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight" style={{ 
-          background: 'linear-gradient(to right, #a3e635, #84cc16)',
+          background: 'linear-gradient(to right, #9dff00ff, #e9ffc8ff)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',

@@ -1,6 +1,10 @@
+               
+
+import React, { useState } from "react";
 import { BookOpen } from "lucide-react";
 
 const AdaptsSection = () => {
+  const [selectedMode, setSelectedMode] = useState<'learning' | 'exam'>('learning');
   return (
     <section className="relative py-20 px-6 bg-black overflow-hidden" style={{ fontFamily: 'Unbounded, sans-serif' }}>
       {/* Grid Background */}
@@ -38,28 +42,56 @@ const AdaptsSection = () => {
 
               {/* Mode Cards */}
               <div className="space-y-4">
-                {/* Learning Mode - Active */}
-                <div className="bg-gray-900/60 border-2 border-gray-900 rounded-2xl p-6 hover:border-gray-600 transition-all duration-300">
+                {/* Learning Mode Card */}
+                <div
+                  className="border-2 rounded-2xl p-6 transition-all duration-300 cursor-pointer"
+                  style={selectedMode === 'learning'
+                    ? { backgroundColor: 'rgba(12, 12, 12, 0.6)', borderColor: '#414141ff' }
+                    : { backgroundColor: 'rgba(45, 45, 45, 0.4)', borderColor: '#313131ff' }
+                  }
+                  onClick={() => setSelectedMode('learning')}
+                >
                   <div className="flex items-start gap-4">
-                    <div className="w-5 h-5 rounded-full border-2 border-lime-400 bg-lime-400 mt-1 flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-black"></div>
+                    <div
+                      className="w-5 h-5 rounded-full border-2 mt-1 flex items-center justify-center"
+                      style={selectedMode === 'learning'
+                        ? { borderColor: '#a3e635', backgroundColor: '#a3e635' }
+                        : { borderColor: '#4b5563', backgroundColor: '#4b5563' }
+                      }
+                    >
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#000' }}></div>
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-white text-xl font-semibold mb-2">Learning Mode</h4>
-                      <p className="text-gray-400 text-sm leading-relaxed">
+                      <h4 className="text-xl font-semibold mb-2" style={{ color: '#fff' }}>Learning Mode</h4>
+                      <p className="text-sm leading-relaxed" style={{ color: '#9ca3af' }}>
                         Prepare for periodic exams with chapter-wise mastery
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Exam Mode - Inactive */}
-                <div className="bg-gray-900/40 border-2 border-gray-800 rounded-2xl p-6 hover:border-gray-700 transition-all duration-300">
+                {/* Exam Mode Card */}
+                <div
+                  className="border-2 rounded-2xl p-6 transition-all duration-300 cursor-pointer"
+                  style={selectedMode === 'exam'
+                    ? { backgroundColor: 'rgba(12, 12, 12, 0.6)', borderColor: '#414141ff' }
+                    : { backgroundColor: 'rgba(45, 45, 45, 0.4)', borderColor: '#313131ff' }
+                  }
+                  onClick={() => setSelectedMode('exam')}
+                >
                   <div className="flex items-start gap-4">
-                    <div className="w-5 h-5 rounded-full border-2 border-gray-600 mt-1"></div>
+                    <div
+                      className="w-5 h-5 rounded-full border-2 mt-1 flex items-center justify-center"
+                      style={selectedMode === 'exam'
+                        ? { borderColor: '#a3e635', backgroundColor: '#a3e635' }
+                        : { borderColor: '#4b5563', backgroundColor: '#4b5563' }
+                      }
+                    >
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#000' }}></div>
+                    </div>
                     <div className="flex-1">
-                      <h4 className="text-white text-xl font-semibold mb-2">Exam Mode</h4>
-                      <p className="text-gray-400 text-sm leading-relaxed">
+                      <h4 className="text-xl font-semibold mb-2" style={{ color: '#fff' }}>Exam Mode</h4>
+                      <p className="text-sm leading-relaxed" style={{ color: '#9ca3af' }}>
                         Prepare for final exams with full-syllabus practice, speed, and confidence
                       </p>
                     </div>
@@ -72,45 +104,62 @@ const AdaptsSection = () => {
             <div className="flex justify-center">
               <div className="w-full max-w-md">
                 {/* Browser chrome */}
-                <div className="bg-gray-900 rounded-t-2xl border border-gray-800 p-3 flex items-center gap-2">
+                <div
+                  className="rounded-t-2xl border p-3 flex items-center gap-2"
+                  style={{ backgroundColor: '#060606', borderColor: '#3c4045' }}
+                >
                   <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-gray-700"></div>
-                    <div className="w-3 h-3 rounded-full bg-gray-700"></div>
-                    <div className="w-3 h-3 rounded-full bg-gray-700"></div>
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#323334' }}></div>
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#323334' }}></div>
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#323334' }}></div>
                   </div>
                   <div className="flex-1 ml-4">
-                    <div className="bg-gray-800 rounded px-4 py-1 text-gray-500 text-xs">
+                    <div
+                        className="rounded px-4 py-1 text-xs"
+                        style={{ backgroundColor: '#1f2123', color: '#fff' }}
+                    >
                       dashboard
                     </div>
                   </div>
                 </div>
                 
                 {/* Content */}
-                <div className="bg-black border-x border-b border-gray-800 rounded-b-2xl p-8">
-                  {/* Book Icon Circle */}
+                <div
+                  className="border-x border-b border-gray-800 rounded-b-2xl p-8"
+                  style={{ background: 'linear-gradient(135deg, #050505ff 0%, #171717ff 100%)' }}
+                >                  {/* Book Icon Circle */}
                   <div className="flex justify-center mb-8">
-                    <div className="w-32 h-32 rounded-full border-2 border-gray-700 flex items-center justify-center">
-                      <BookOpen className="w-12 h-12 text-lime-400" strokeWidth={2} />
+                    <div
+                      className="w-32 h-32 rounded-full border-2 flex items-center justify-center"
+                      style={{ borderColor: '#303234ff' /* gray-700 */, backgroundColor: 'transparent' }}
+                    >
+                      <BookOpen className="w-12 h-12" strokeWidth={2} style={{ color: '#a3e635' /* lime-400 */ }} />
                     </div>
                   </div>
-                  
+
                   {/* Title */}
-                  <h3 className="text-white text-center text-xl font-semibold mb-6">
+                  <h3
+                    className="text-center text-xl font-semibold mb-6"
+                    style={{ color: '#fff' }}
+                  >
                     Surface Area and<br />Volumes
                   </h3>
-                  
+
                   {/* Status and Time */}
                   <div className="flex items-center justify-center gap-4 mb-6 text-sm">
-                    <span className="text-teal-400 bg-teal-400/20 px-3 py-1 rounded-full font-medium">
+                    <span
+                      className="px-3 py-1 rounded-full font-medium"
+                      style={{ color: '#2dd4bf', backgroundColor: 'rgba(45, 212, 191, 0.125)' }}
+                    >
                       Conceptual
                     </span>
-                    <span className="text-gray-400">15 min remaining</span>
+                    <span style={{ color: '#9ca3af' /* gray-400 */ }}>15 min remaining</span>
                   </div>
-                  
+
                   {/* Progress Bar */}
                   <div className="space-y-2">
-                    <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-                      <div 
+                    <div className="h-2 rounded-full overflow-hidden" style={{ backgroundColor: '#1f2937' /* gray-800 */ }}>
+                      <div
                         className="h-full rounded-full"
                         style={{
                           width: '75%',
@@ -118,7 +167,7 @@ const AdaptsSection = () => {
                         }}
                       />
                     </div>
-                    <div className="text-center text-gray-500 text-sm">
+                    <div className="text-center text-sm" style={{ color: '#6b7280' /* gray-500 */ }}>
                       Mastery: 75%
                     </div>
                   </div>

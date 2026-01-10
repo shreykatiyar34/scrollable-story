@@ -1,3 +1,5 @@
+
+import image from "@/assets/image.png";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
@@ -8,25 +10,13 @@ const LandingNavbar = () => {
       <div className="w-full flex items-center justify-between px-8 py-4">
         {/* Logo */}
         <div className="flex items-center text-white text-2xl font-bold tracking-tight">
-          <span>ky</span>
-          <span className="inline-flex flex-col items-center mx-[-2px]">
-            {/* Antenna */}
-            <span className="inline-block w-2 h-2 rounded-full bg-lime-500 mb-[-2px] z-10"></span>
-            
-            {/* Robot body */}
-            <span className="inline-flex items-center justify-center gap-1 bg-lime-500 rounded-lg px-2 py-1">
-              {/* Left eye */}
-              <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-white">
-                <span className="inline-block w-2 h-2.5 rounded-full bg-black"></span>
-              </span>
-              
-              {/* Right eye */}
-              <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-white">
-                <span className="inline-block w-2 h-2.5 rounded-full bg-black"></span>
-              </span>
-            </span>
-          </span>
-          <span>rious.ai</span>
+          <span style={{ marginRight: 1 }}>ky</span>
+          <img
+            src={image}
+            alt="logo"
+            style={{ width: 32, height: 32, margin: "0 2px" }}
+          />
+          <span style={{ marginLeft: 1 }}>rious.ai</span>
         </div>
 
         {/* Navigation Links and Start Free Test Button */}
@@ -40,6 +30,7 @@ const LandingNavbar = () => {
           <button
             onClick={() => navigate("/test")}
             className="bg-lime-400 text-black font-bold px-6 py-2 rounded-md hover:bg-lime-500 transition-colors text-base whitespace-nowrap"
+            style={{ fontFamily: 'Unbounded, sans-serif' }}
           >
             Start Free Test
           </button>
